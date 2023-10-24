@@ -10,12 +10,8 @@
         h1{
             color: aqua;
         }
-        /* The specificity of this selector is 10 */
-        /* .yellow{
-            color: yellow;
-        } */
-        /* for complex selector :: counting specificity ofthis complex selector is 1+10=11*/
-        h.yellow{
+        /* The specificity of this selector is 10 */ */
+         .yellow{
             color: yellow;
         }
         /* The specificity of this selector is 10 */
@@ -25,6 +21,11 @@
         /* The specificity of this selector is 10 */
         .cpurple{
             color: purple;
+        }
+        
+        /* for complex selector:-The specificity of this selector is 10+1=11*/
+        h1.yellow{
+            color: yellow;
         }
         /* attribute selector :-The specificity of this selector is 10 */
         [data-x=a]{
