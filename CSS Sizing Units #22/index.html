@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 12px;
+        }
+        .box {
+            border: 2px solid black;
+            /* width: 1185px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid black;
+            /* width: 1185px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            /* font-size: 18px; */
+        }
+
+        .container p {
+            font-size: 2rem;
+        }
+        .mycont{
+            box-sizing: border-box;
+            border: 2px solid black;
+            color:black;
+            font-size: 22px;
+            /* width:100vmin;*/
+            width: 80vw;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aut enim tempora omnis? Molestias, saepe est?
+            Eius officiis alias voluptate laborum? Molestiae blanditiis consequuntur quas!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero totam, quia, beatae molestias velit mollitia perferendis at doloribus quo reiciendis reprehenderit voluptatum laudantium accusamus aliquam numquam repudiandae, consequatur dolores. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dignissimos consequuntur. Ea perferendis mollitia unde corporis, nobis natus earum obcaecati exercitationem molestiae accusantium minima doloremque incidunt at, harum suscipit magni rem eius quod eaque distinctio? Officiis aut inventore dolor vel non sequi architecto itaque explicabo quia a! Beatae tempora quae obcaecati officiis, veniam suscipit sapiente consequatur sint earum repellat facere voluptatibus libero iure enim necessitatibus? Iste quam magnam esse mollitia temporibus, ut minus perspiciatis quidem impedit? Atque quae obcaecati earum dolores sequi, velit ex placeat praesentium similique corrupti sunt quos ab repellat, minima provident blanditiis saepe nulla! Delectus, inventore tempora? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, assumenda?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ipsum architecto quas aliquid beatae provident?</p>
+    </div>
+    <div class="mycont">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi non minima neque? Soluta corporis ducimus vel sit delectus, dolorem quae, hic error ut exercitationem tempore similique, voluptate autem officiis.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+</body>
+
+</html>
