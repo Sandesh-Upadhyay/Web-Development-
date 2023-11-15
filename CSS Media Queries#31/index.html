@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        @media  screen and (orientaton:portrait) {
+            body{
+                border: 2xp solid purple;
+            }
+            
+        }
+        @media only screen and (max-width:455px) {
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+            /* @media not|only mediatype and (expressions) CSS Code; */  
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            background-color:;
+            width:344px;
+            height:344px;
+            margin: 3px;
+            padding: 3px;
+            border: 2px solid brown;
+        
+        }
+    </style>
+</head>
+<body>
+    <div> <ul>
+        <li>Weapon</li>
+        <li>Tool</li>
+        <li>Measurement</li>
+    </ul></div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
