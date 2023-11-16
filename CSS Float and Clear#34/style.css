@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+}
+img{
+    border-radius:8px;
+    padding:10px 20px 10px 40px;
+    /* margin:5px 10px;; */
+    margin: auto;
+    /* float: left; */
+    float:right;
+}
+.cards{
+    border: 2px solid black;
+    display: flow-root;
+}
+.card{
+    border: 2px solid darkgrey;
+}
+.card:nth-child(3){
+    clear:right;
+}
