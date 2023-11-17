@@ -1,0 +1,68 @@
+body{
+    background-color: cadetblue;
+}
+ /* .boxes *{
+    color:black;
+     padding: 45px;
+    border: 2px solid rgba(224, 191, 191, 0.466);
+}         */
+/*.box,a,[data-color="primary"]{
+    padding-top: 45px;
+    margin-top: 45px;
+} */
+
+/* * .box:nth-child(odd){
+    color: beige;
+} */
+/* * .box:nth-child(even){
+    color: beige;
+} */
+/* * .box:nth-child(1){
+    color: blanchedalmond;
+} */
+
+/* .box:nth-last-child(2){
+    color: blueviolet;
+} */
+
+/* .box:last-child{
+    color: blanchedalmond;
+} */
+
+/* .boxes::before{
+    content: "Hey Am a Good Guy";
+    color: cornflowerblue;
+    background-color: bisque;
+}
+.boxes::after{
+    content: "Hey Am not Good but A Perfect Guy😊😊";
+    color: cornflowerblue;
+    background-color: bisque;
+} */
+::selection{
+    background-color: aqua;
+    color:black;            
+}
+.box::first-letter{
+    color: peru;
+    font-size:45px;
+}
+input::placeholder{
+    color:grey;
+}
+/* .box:first-child{
+    color: brown;
+}
+.box:first-child:first-line{
+    color: burlywood;
+}
+.box:nth-child(2)::first-letter{
+    color: turquoise;
+}
+.box:nth-child(2)::first-line{
+    color: turquoise;
+}
+
+.box:nth-child(3):first-line{
+    color: tomato;
+} */
