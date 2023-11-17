@@ -5,7 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solution Card</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: grey;
+            padding: 80px;
+            /* display: flex; */
+        }
+
+        .card {
+            background-color: white;
+            width: 198px;
+            /* height: 344px; */
+            border-radius: 7px;
+            padding: 0 0 34px 0;
+            margin-top: 12px;
+            margin-left: 12px;
+
+        }
+
+        .image {
+            padding: 5px;
+        }
+
+        .image img {
+            border-radius: 7px;
+        }
+
+        .content {
+            padding: 12px 13px;
+            /* font-family: 'Baloo Bhai 2', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .content p {
+            font-size: 10px;
+            color: grey;
+        }
+
+        .capsules {
+            padding: 0px 26px 0px 15px;
+        }
+
+        .capsules span {
+            border: 1px solid grey;
+            padding: 0px 5px;
+            border-radius: 8px;
+            font-size: 9px;
+            font-family: 'Baloo Bhai 2', sans-serif;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .button button {
+            /* border-radius: 8px;
+    border: 1px solid black;
+    background-color: gray;
+    color: blue;
+    font: ; */
+            padding: 7px 7px;
+            border-radius: 15px;
+            font-size: 8px;
+            font-weight: bold;
+            color: rgb(75, 75, 247);
+            border: none;
+            background-color: rgb(170, 206, 237);
+            margin-top: 7px;
+            cursor: pointer;
+        }
+        .button button:hover{
+            color: rgb(255,255, 255);
+            background-color: rgb(10, 136, 214);
+        }
+    </style>
 </head>
 
 <body>
@@ -19,12 +99,31 @@
         </div>
         <div class="content">
             <h2>Sandesh</h2>
-            <p>Majestic mountains embrace serene nature, echoing whispers of ancient peaks. Breathtaking vistas, untamed wilderness, a symphony of life—where tranquility and grandeur converge in nature's sanctuary.</p>
+            <p>Majestic mountains embrace serene nature, echoing whispers of ancient peaks. Breathtaking vistas, untamed
+                wilderness, a symphony of life—where tranquility and grandeur converge in nature's sanctuary.</p>
         </div>
         <div class="button">
             <button>Read more</button>
         </div>
     </div>
+    <div class="card">
+        <div class="image">
+            <img width="188" src="https://purepng.com/public/uploads/large/nature-yuh.png" alt="">
+        </div>
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Mountain</span>
+        </div>
+        <div class="content">
+            <h2>Sandesh</h2>
+            <p>Majestic mountains embrace serene nature, echoing whispers of ancient peaks. Breathtaking vistas, untamed
+                wilderness, a symphony of life—where tranquility and grandeur converge in nature's sanctuary.</p>
+        </div>
+        <div class="button">
+            <button>Read more</button>
+        </div>
+    </div>
+
 
 </body>
 
