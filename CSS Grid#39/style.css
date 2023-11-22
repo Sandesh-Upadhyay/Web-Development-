@@ -1,0 +1,42 @@
+body{
+    background-color: violet;
+}
+
+.container{
+    border: 2px solid black;
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                        "side article note"
+                        "footer footer footer";
+}                        
+.item{
+    height: 45px;
+    /* width: 45px; */
+    border: 2px solid rgb(170, 193, 202);
+
+}
+.item-1{
+    grid-area: nav;
+    background-color: aquamarine;
+}
+.item-2{
+    grid-area: side;
+    /* grid-column: 1/3; */
+    background-color: burlywood;
+}
+.item-3{
+    grid-area: article;
+    background-color: chartreuse;
+    /* grid-column: 3/4; */
+}
+.item-4{
+    grid-area: footer;
+    /* grid-column: 1/4; */
+    background-color: cadetblue;
+}
+.item-5{
+    grid-area: nav;
+}
+.item-6{
+    grid-area: side;
+}
