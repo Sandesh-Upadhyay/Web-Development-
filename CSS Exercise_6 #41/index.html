@@ -1,83 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar using flexbox</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        nav{
-            display: flex;
-            justify-content: baseline;
-            justify-content: flex-end; 
-                  
-        }
-        ul li{       
-            display: inline-flex;
-            text-decoration: none;
-            padding: 20px;
-        }
-        h1{
-            flex-direction: column;
-            margin-top: 50px;
-            display: flex;
-            align-items: center;
-            font-size: 45px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 50
-        }
-        main h3{
-            flex-wrap: wrap; 
-        }
-        h3{
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 100;
-            font-size: x-large;
-        }
-        main h4{
-            display: flex;
-            justify-content: center;
-        }
-        .box{
-            height: 30px;
-            padding: 40px;
-            margin-top: 20px;
-            background-color: rgb(52, 231, 231);
-            color: white;
-            font-weight: bold;
-            font-family: 'Poppins', sans-serif;
-            border-radius: 20px;
 
+        nav {
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+
+        }
+
+        ul li {
+            list-style: none;
+            justify-content: center;
+            font-family: 'Segoe UI';
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            margin-top: 20vh;
+            font-family: 'Segoe UI';
+            font-weight: lighter;
+            font-weight: 100;
+            font-size: 24px;
+            color: #222;
+        }
+
+        main img{
+            width: 112px;
+        }
+        /* h1{
+            display: flex;
+            align-content: center;
+        } */
+        div h3{
+            display: flex;
+            justify-content: center;
+            word-wrap: break-word;
+            /* line-height: 1.3em; */
+
+        }
+
+        h3 {
+            margin-top: 10vh;
+            font-family: 'Segoe UI';
+            font-weight: 500;
+            font-size: 24px;
+            color: #222;
+            padding-bottom: 10px;
+            
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box button {
+            background-color:#00b6d1;
+            color: white;
+            margin: 30px;
+            padding: 10px;
+            width: fit-content;
+            border: 2px solid rgb(51, 167, 181);
+            border-radius: 5px;
+            font-family: 'Segoe UI';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
         }
     </style>
 </head>
+
 <body>
     <div>
         <header>
-            <nav>
+            <nav><img width=162px src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt=""></li>
                 <ul>
                     <li>Products</li>
                     <li>Pricing</li>
                     <li>Resources</li>
                     <li>About us</li>
-                    <li><img width="40px" src= "https://th.bing.com/th/id/OIP.30bSI77x3o7c8d9zJ2U-xAHaHa?rs=1&pid=ImgDetMain" alt=""></li>
-                </ul>
+                    <li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+                    </li>
             </nav>
         </header>
     </div>
     <div>
         <main>
-            <h1>Download UltraEdit for Windows</h1>
-            <h3>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</h3>
-            <h4 class="box">DOWNLOAD MAC OR LINUX VERSION</h4>
+            <h1>Download UltraEdit for Windows 
+                <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="">
+            </h1>
         </main>
+        <div>
+            <h3>Download and try UltraEdit before you buy it! This download includes the full Windows version of the
+                text editor.</h3>
+        </div>
+        <div>
+            <h4 class="box">
+                <button>
+                    DOWNLOAD MAC OR LINUX VERSION
+                </button>
+            </h4>
+        </div>
     </div>
 </body>
+
 </html>
