@@ -1,0 +1,21 @@
+.container{
+    height: 40vh;
+    width: 40vw;
+    background-color: bisque;
+}
+.box{
+    height: 20vh;
+    width: 20vw;
+    background-color: aqua;
+    /* transition-property: transform ; */
+    /* transition-property: all; */
+    /* transition-property: background-color , transform; */
+    /* transition-duration: 3s; */
+    /* transition-timing-function: cubic-bezier(1, 0.11, 0.19, 0.95); */
+    /* transition-delay: 1s; */
+    transition: all 3s cubic-bezier(0.09,0.5,0,0.99) 2s;
+}
+.translate{
+    transform: translateX(10vw) translateY(10vh) scale(2);
+    background-color: maroon;
+}
