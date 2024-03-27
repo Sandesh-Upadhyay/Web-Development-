@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun-rise Animation</title>
+    <style>
+        :root {
+  overflow: hidden; /* hides any part of the sun below the horizon */
+  background-color: lightblue;
+  display: flex;
+  justify-content: center; /* centers the sun in the background */
+}
+
+.sun {
+  background-color: yellow;
+  border-radius: 50%; /* creates a circular background */
+  height: 100vh; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate sun-rise;
+}
+
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+
+  }
+}
+
+</style>
+</head>
+<body>
+    <div class="sun"></div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        :root{
+            height: 350px;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: beige;
+            border-radius: 80px;
+            position: absolute;
+            bottom: 0;
+            animation: bounce_ball 3s linear 2s ease-in-out alternate ;
+        }
+        @keyframes bounce_ball{
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(30 deg);
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="box"></div>  
+</body>
+</html>
