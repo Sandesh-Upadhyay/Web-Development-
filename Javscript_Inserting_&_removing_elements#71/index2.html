@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting IDs , Classes</title>
+    <style>
+    .cont{
+        margin: auto;
+        padding: 20px;
+        height: 50px;
+        width: 50px;
+        background-color: antiquewhite;
+        border: 2px solid black;
+    }
+    #main{
+        height: 50px;
+        width: 50px;
+        background-color: antiquewhite;
+        border: 2px solid black;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cont">hEy</div>
+        <div class="cont">hEy</div>
+        <div class="cont">hEy</div>
+        <div id="main" class="cont">HelloS</div>  
+        <div class="cont">hEy</div>
+        <div class="cont">hEy</div>
+    </div>
+
+    <script>
+        let cap = document.getElementsByClassName("cont")
+        console.log(cap)
+
+        cap[0].style.backgroundColor = "green"
+        cap[1].style.backgroundColor = "blue"
+        cap[2].style.backgroundColor = "indigo"
+        cap[3].style.backgroundColor = "aqua"
+        cap[4].style.backgroundColor = "orange"
+
+        document.getElementById("main").style.backgroundColor = "red";
+        console.log(San);
+
+
+        document.querySelector(".cont").style.backgroundColor = "green"
+
+       document.querySelectorAll(".cont").forEach(e=>{e.style.backgroundColor = "brown"})
+    //    Name
+       document.getElementsByName("div");
+// TagName
+       document.getElementsByTagName("div");
+// matches
+       e = document.getElementsByTagName("div");
+       e[4].matches("#main");
+    //closet
+    e[3].closest("#mains");
+
+    // contins
+
+    document.querySelector(".box").contains(e[2]);
+
+
+    </script>
+</body>
+</html>

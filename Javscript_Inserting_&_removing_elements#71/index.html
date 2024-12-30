@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting & Removing Elements</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            width: auto;
+
+        }
+        .container{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="display: grid;" data-createdby="Sandesh" data-composedby="Nonoe">
+        <li>
+            <ul>Home</ul>
+            <ul>Contact Us</ul>
+            <ul>About</ul>
+            <ul>Our Vision</ul>
+        </li>
+        <div class="container red amesterdum hey">
+            <ul>
+                <li>Hey</li>
+                <li>This</li>
+                <li>Table</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="goat">
+        Hey I'm Good Boy
+    </div>
+    <div>Hey I'm Bad Boy</div>
+    <script>
+        let e = document.querySelector("table").innerHTML;
+        e.document.querySelector("table").innerHTML;
+        //innerText
+        e.document.querySelector("table").innerText;
+        // outerHTML
+        e.document.querySelector("table").outerHTML;
+        // outerText
+        e.document.querySelector("table").outerText;
+        // tagName
+        e.document.querySelector("table").tagName;
+        // nodeName
+        e.document.querySelector("table").nodeName;
+        // textContent
+        e.document.querySelector("table").textContent;
+        // hidden
+        e.document.querySelector("div").hidden;
+        // hidden any element
+        e.document.querySelector("div").hidden = true;
+        //to change innerHTML 
+        e.document.querySelector("div").innerHTML = " ";
+
+        // For Attribute
+
+        //For hasAttribute
+        e.document.querySelector("div").hasAttribute("style");
+        //For getAttribute
+        document.querySelector("div").getAttribute("style");
+
+        //For setAttribute
+        e.document.querySelector("div").setAtrribute("style" , "backgroundColor:brown");
+
+        // To get all attribute
+        e.document.querySelector("div").attributes;
+
+        // To remove any attribute
+        e.document.querySelector("div").removeAttrib;
+
+        append()
+        let abc = document.createElement("abc");
+        abc.innerHTML = "Hey this is me <b>Sandesh</b>";
+        // div.setAtrribute("class" , "created");
+        document.querySelector(".goat").append(abc);
+
+        //prepend()
+        document.querySelector(".goat").prepend(abc);
+
+        // // before()
+        document.querySelector(".goat").before(abc);
+
+        // after()
+        document.querySelector(".goat").after(abc);
+
+        // replaceWith()
+        document.querySelector(".goat").replaceWith(abc);
+
+
+        // insertAdjacentHTML
+
+        // afterbegin
+        let b  = document.querySelector(".container");
+        b.insertAdjacentHTML("afterbegin", "<b>Hey I'm inserted</b>");
+
+        // afterend
+        b.insertAdjacentHTML("afterend", "<b>Hey I'm inserted</b>");
+
+        //beforebegin
+        b.insertAdjacentHTML("beforebegin", "<b>Hey I'm inserted</b>");
+
+        //beforeend 
+        b.insertAdjacentHTML("beforeend", "<b>Hey I'm inserted</b>");
+        
+
+        //insertAdjacentElement
+
+        let buy = document.querySelector(".goat");
+        
+        buy.insertAdjacentElement("afterbegin", Hey the is me);
+
+        // classList
+        document.querySelector(".container").classList();
+
+        // className
+        document.querySelector(".container").className();
+
+        //classList.add
+        document.querySelector(".container").className.add("Hey");
+
+        // classList.remove
+        document.querySelector(".container").classList.remove("Hey");
+
+        // classList.toggle
+        document.querySelector(".container").classList.toggle("red");
+
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- <script>
+       let abc = document.body.childNodes[1];
+       abc.childNodes[1].childNodes[7]
+       abc.firstElementChild.childNodes[1].style.backgroundColor="blue"
+       abc.firstElementChild.childNodes[3].style.backgroundColor="red"
+       abc.firstElementChild.childNodes[5].style.backgroundColor="yellow"
+       abc.firstElementChild.childNodes[7].style.backgroundColor="green"
+
+       console.log(abc)
+    </script> -->
