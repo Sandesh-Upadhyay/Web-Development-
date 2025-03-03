@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event BubblingL</title>
+</head>
+<body>
+    <div class="H1">Hello, World!</div>
+    <div class="h2">This is a basic HTML file.</div>
+</body>
+<script>
+    document.body.addEventListener('click',() => {
+        alert('Body was clicked!');
+    });
+
+    document.querySelector(".H1").addEventListener('click',(e) =>{
+        alert('H1 was clicked!');
+        event.stopPropagation(); // Prevents the event from bubbling up to the body
+    });
+// using arrow function
+    document.querySelector('.h2').addEventListener('click',(e) =>{
+        alert('Paragraph was clicked!');
+        event.stopPropagation(); // Prevents the event from bubbling up to the body
+    });
+// using regular function
+    document.querySelector('.h2').addEventListener('click', function(event) {
+        alert('Paragraph was clicked!');
+        event.stopPropagation(); // Prevents the event from bubbling up to the body
+    });
+
+
+    // setTimeout
+    setTimeout(() => {
+        document.querySelector('.h2').style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    }, 3000);
+
+    // clearTimeout
+    let timeout = setTimeout(() => {
+        document.querySelector('.h2').style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    }, 3000);
+    clearInterval(timeout);
+
+    // setInterval
+    setInterval(() => {
+        document.querySelector('.h2').style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    }, 1000);
+
+    // clearInterval
+    let interval = setInterval(() => {
+        document.querySelector('.h2').style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    }, 3000);
+    clearInterval(interval);
+
+</script>
+</html>
