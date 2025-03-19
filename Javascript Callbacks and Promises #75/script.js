@@ -86,3 +86,18 @@ ChotaAadmi(() => {
 });
 });
 
+const greeting = (name) => {
+    console.log(`Hello ${name}`+ `Kaise ho` + `Sab theek hai`);
+}
+
+greeting("Manav");                    // Hello Manav
+greeting("Rahul");                    // Hello Rahul
+greeting("Sahil");                    // Hello Sahil    
+greeting("Rohit");                    // Hello Rohit
+greeting("Rajat");                    // Hello Rajat
+greeting("Raj");                      // Hello Raj
+greeting("Rohan");                    // Hello Rohan
+greeting("Rahul");                    // Hello Rahul
+
+
+
