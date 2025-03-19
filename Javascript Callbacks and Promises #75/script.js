@@ -1,3 +1,6 @@
+// Discription: This file contains the JavaScript code for the callback functions.
+// Date: 19th March, 2025
+
 // function makeSandwich(type, callback) {
 //     console.log(`Making a ${type} sandwich...`);
 //     setTimeout(() => {

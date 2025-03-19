@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Custom Markers with MapLibre</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://unpkg.com/maplibre-gl@4.1.2/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@4.1.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+    /* Custom marker design */
+    .custom-marker {
+      width: 5px;
+      height: 5px;
+      background-color: purple;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-marker:after {
+      content: 'A';
+      position: absolute;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 25px;
+      height: 25px;
+      background-color: purple;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    // Initialize the map
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: {
+        "version": 8,
+        "name": "OpenStreetMap",
+        "metadata": {
+          "maptiler:copyright": "You are licensed to use the style or its derivative for serving map tiles exclusively with MapTiler Server or MapTiler Cloud and in accordance with their licenses and terms. If you plan to use the style in a different way, contact us at sales@maptiler.com.",
+          "maputnik:renderer": "mlgljs"
+        },
+        "center": [2.8655946968546004, 22.80535462569901],
+        "zoom": 0.7418741168636303,
+        "bearing": 0,
+        "pitch": 0,
+        "sources": {
+          "openmaptiles": {
+            "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=jZA2mXOPDNtMFyPbgmXY",
+            "type": "vector"
+          }
+        },
+        "sprite": "https://api.maptiler.com/maps/openstreetmap/sprite",
+        "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=jZA2mXOPDNtMFyPbgmXY",
+        "layers": [
+          {
+            "id": "Background",
+            "type": "background",
+            "layout": { "visibility": "visible" },
+            "paint": {
+              "background-color": "rgba(234, 221, 248, 1)",
+              "background-opacity": 1
+            }
+          },
+          {
+            "id": "Water",
+            "type": "fill",
+            "metadata": {},
+            "source": "openmaptiles",
+            "source-layer": "water",
+            "filter": ["all", ["!=", "intermittent", 1], ["!=", "brunnel", "tunnel"]],
+            "layout": { "visibility": "visible" },
+            "paint": { "fill-color": "rgba(255, 255, 255, 1)" }
+          },
+          {
+            "id": "Country border",
+            "type": "line",
+            "metadata": {},
+            "source": "openmaptiles",
+            "source-layer": "boundary",
+            "minzoom": 0,
+            "maxzoom": 24,
+            "filter": ["all", ["==", "admin_level", 2]],
+            "layout": {
+              "line-cap": "round",
+              "line-join": "round",
+              "visibility": "visible",
+              "line-miter-limit": 0
+            },
+            "paint": {
+              "line-color": "rgba(43, 41, 43, 1)",
+              "line-width": { "stops": [[3, 0.5], [5, 1.2]], "base": 1 },
+              "line-opacity": 0.6
+            }
+          }
+        ],
+        "id": "openstreetmap"
+      }
+    });
+
+    // Add navigation control
+    map.addControl(new maplibregl.NavigationControl());
+
+    // Example locations for dynamic markers
+    async function getCoordinates(location) {
+      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(location)}&format=json&limit=1`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data.length > 0) {
+          const lat = parseFloat(data[0].lat);
+          const lon = parseFloat(data[0].lon);
+          return { lat, lon, name: data[0].display_name };
+        } else {
+          console.error("No coordinates found for:", location);
+          return null;
+        }
+      } catch (error) {
+        console.error("Error fetching coordinates:", error);
+        return null;
+      }
+    }
+
+    // Add markers dynamically using location names
+    const locations = [
+      // { name: "Austin, Texas, USA" },
+      // { name: "San Francisco, California, USA" },
+      // { name: "Sydney, Australia" }, 
+      { name: "Hyderabad, India, Asia" }
+      
+    ];
+
+    locations.forEach(async (location) => {
+      const coordinates = await getCoordinates(location.name);
+      if (coordinates) {
+        const markerEl = document.createElement('div');
+        markerEl.className = 'custom-marker';
+
+        // Create a new marker with custom content and add it to the map
+        new maplibregl.Marker({
+          element: markerEl,
+          anchor: 'bottom'
+        })
+          .setLngLat([coordinates.lon, coordinates.lat])
+          .setPopup(
+            new maplibregl.Popup({ offset: 25 }).setText(coordinates.name) // Add popup with location name
+          )
+          .addTo(map);
+      }
+    });
+  </script>
+</body>
+</html>
