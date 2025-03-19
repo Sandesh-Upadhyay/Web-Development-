@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            background-color: black;
+            padding: 10px;
+            margin: auto;
+            color: white;
+            border-radius: 10px;
+        }
+        .img img{
+            border-radius: 10px;
+        }
+        .duration {
+            background-color: black;
+            border-radius: 5px;
+            padding: 2px;
+            color: white;
+            position: absolute;
+            top: 130px;
+            left: 218px;
+            opacity: 0.8;
+        }
+        .details{
+            color: grey;
+            font-size: 15px;
+            margin: 6px;
+            margin-top: 12px;
+        }
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            margin: 6px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        
+    </style>
+<div class="container">
+    <div class="img">
+        <img class ="image" src="" alt="">
+        <div class="duration">34:33</div>
+    </div>
+    <div class="others">
+        <div class="title"></div>
+        <div class="details"></div>
+    </div>
+</div>
+<script>
+    function createCard(title,cName,views,monthsOld,duration,thumbnail){
+        document.querySelector(".duration").innerHTML = duration;
+        document.querySelector(".title").innerHTML = title;
+        if(views>=1000000)views = views/1000000 + "M";
+        else if(views>=1000)views = views/1000 + "K";
+        document.querySelector(".details").innerHTML = cName + " . " + views + " views  . " + monthsOld + " months ago ";
+        document.querySelector(".image").src = thumbnail;
+    }
+    createCard("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 560000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw");
+</script>
+</body>
+</html>
