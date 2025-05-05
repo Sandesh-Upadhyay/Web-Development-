@@ -418,236 +418,323 @@ const { callbackify } = require("util");
 // Promise Example:
 
 function setupSDK() {
-    return new Promise((resolve, rejects) =>{
+    return new Promise((resolve, reject) =>{
         console.log("Install vs code");
         setTimeout(() => {
-            console.log("installed vs code");
-            resolve();
-            rejects("error in installing vs code");
+            let success = true; // Simulating success or failure
+            if(success){
+                resolve("installed vs code");
+            }else{
+                reject("error in installing vs code");
+            }
         },2000);
     })
 };
-function runSDK() {
-    return new Promise(()=>{
-      console.log("Installing the T&C");
-      setTimeout(() =>{
-        console.log("installed entire vs code");
-        resolve();
-        rejects("error in installing the T&C");
-      }, 2000);  
-    })
-}
+// console.log("installed vs code");
+// function runSDK() {
+//     return new Promise(()=>{
+//       console.log("Installing the T&C");
+//       setTimeout(() =>{
+//         console.log("installed entire vs code");
+//         resolve();
+//         rejects("error in installing the T&C");
+//       }, 2000);  
+//     })
+// }
 
-function chooseLan() {
-    return  new Promise((resolve, rejects) =>{
-        console.log("choosing language");
-        setTimeout(() => {
-            console.log("language chosen");
-            resolve();
-            rejects("error in choosing language");
-        }, 1500);
+// function chooseLan() {
+//     return  new Promise((resolve, rejects) =>{
+//         console.log("choosing language");
+//         setTimeout(() => {
+//             console.log("language chosen");
+//             resolve();
+//             rejects("error in choosing language");
+//         }, 1500);
+//     })
+// }
+// function writeProject() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("writing project");
+//         setTimeout(() => {
+//             console.log("project written");
+//             resolve();
+//             rejects("error in writing project");
+//         }, 2000);
+// })
+// }
+// function runProject() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run project");
+//         setTimeout(() => {
+//             console.log("project run");
+//             resolve();
+//             rejects("error in running project");
+//         }, 2000);
+// })
+// }
+// function writtenHTML() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing HTML");
+//         setTimeout(() => {
+//             console.log("HTML written");
+//             resolve();
+//             rejects("error in writing HTML");
+//         }, 2000);
+// })
+// } 
+// function runHTML() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run HTML");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running HTML");
+//         }, 1000);
+// })
+// }
+// function writtenCSS() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing CSS");
+//         setTimeout(() => {
+//             console.log("CSS written");
+//             resolve();
+//             rejects("error in writing CSS");
+//         }, 2000);
+// })      
+// }
+// function runCSS() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run CSS");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running CSS");
+//         }, 1000);
+// })
+// } 
+// function writtenJS() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing JS");
+//         setTimeout(() => {
+//             console.log("JS written");
+//             resolve();
+//             rejects("error in writing JS");
+//         }, 2000);
+// })
+// }
+// function runJS() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run JS");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running JS");
+//         }, 1000);
+// })
+// }
+// function writtenReact() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing React");
+//         setTimeout(() => {
+//             console.log("React written");
+//             resolve();
+//             rejects("error in writing React");
+//         }, 2000);
+// })
+// }
+// function runReact() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run React");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running React");
+//         }, 1000);
+// })
+// }
+// function writtenNode() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing Node");
+//         setTimeout(() => {
+//             console.log("Node written");
+//             resolve();
+//             rejects("error in writing Node");
+//         }, 2000);
+// })
+// }
+// function runNode() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run Node");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running Node");
+//         }, 1000);
+// })
+// }
+// function writtenExpress() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing Express");
+//         setTimeout(() => {
+//             console.log("Express written");
+//             resolve();
+//             rejects("error in writing Express");
+//         }, 2000);
+// })
+// }
+// function runExpress() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run Express");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running Express");
+//         }, 1000);
+// })
+// }  
+// function writtenMongo() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log(" writing Mongo");
+//         setTimeout(() => {
+//             console.log("Mongo written");
+//             resolve();
+//             rejects("error in writing Mongo");
+//         }, 2000);
+// })
+// }
+// function runMongo() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run Mongo");                        
+//         setTimeout(() => {
+//             console.log("run");
+//             resolve();
+//             rejects("error in running Mongo");
+//         }, 1000);
+// })
+// }
+// function writtenMongoose() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("writing Mongoose");
+//         setTimeout(()=>{
+//             console.log("Mongoose written");
+//             resolve();
+//             rejects("error in writing Mongoose");
+//         },2000);
+//     })    
+// }
+// function runMongoose() {
+//     return new Promise((resolve , rejects) =>{
+//         console.log("run Mongoose");                        
+//         setTimeout(() => {
+//             // console.log("run");
+//             resolve("mission successful");
+//             rejects("error in running Mongoose");
+//         }, 1000);
+// })
+setupSDK()
+// .then(runSDK)
+// .then(chooseLan)
+// .then(writeProject)
+// .then(runProject)
+// .then(writtenHTML)
+// .then(runHTML)
+// .then(writtenCSS)
+// .then(runCSS)
+// .then(writtenJS)
+// .then(runJS)
+// .then(writtenReact)
+// .then(runReact)
+// .then(writtenNode)
+// .then(runNode)
+// .then(writtenExpress)
+// .then(runExpress)
+// .then(writtenMongo)
+// .then(runMongo)
+// .then(writtenMongoose)
+// .then(runMongoose)
+// .then((message) => console.log(message))   
+// .catch((error) => console.log("error",error));
+
+
+
+// function catchTheBear(){
+//     return new Promise((resolve , reject)=>{
+//         setTimeout(()=>{
+//             // let success = true;
+//             let success = false;
+//             if (success){
+//                 resolve("bear shot")
+//             }else{
+//                 reject("bear escaped")
+//             }
+//         } ,2000)
+//     });
+// };
+// catchTheBear()
+// .then(message => console.log(message))
+// .catch(error => console.log(error));
+
+
+// function openWallet(){
+//     return new Promise((resolve , reject)=>{
+//         console.log("⏳ Opening wallet...");
+//         setTimeout(()=>{
+//             // let success = true;
+//             let success = Math.random() < 0.5; // Randomly simulating success or failure
+//             if(success){
+//                 resolve("✅ Wallet opened successfully!");
+//             }else{
+//                 reject("❌ Error: Wallet could not be opened.");
+//             }
+//         }, 2000);
+//     });
+// };
+// openWallet()
+// .then((message)=> console.log(message))
+// .catch((error)=> console.log(error));
+
+
+function flipCoinFrontend() {
+    document.querySelector(".result").textContent = "⏳ Flipping...";
+    let coin = document.querySelector(".coin");
+    let sound = document.getElementById("flipSound");
+    sound.play(); // Play coin flip sound
+
+    flipCoin()
+        .then((message) => {
+            let isHeads = message.includes("HEADS");
+
+            gsap.to(coin, {
+                duration: 1.5,  
+                rotationX: 1080,  
+                y: -150, 
+                ease: "power2.out",
+                onComplete: () => {
+                    gsap.to(coin, { y: 0, duration: 0.5, ease: "bounce.out" }); 
+                    coin.textContent = isHeads ? "HEADS" : "TAILS";
+                    document.querySelector(".result").textContent = message;
+                }
+            });
+        })
+        .catch((error) => {
+            document.querySelector(".result").textContent = error;
+        });
+}
+function flipCoin(){
+    return new Promise((resolve , reject)=>{
+        console.log("⏳ Flipping coin...");
+        setTimeout(()=>{
+            let success = Math.random() <0.5;
+            if (success){
+                // resolve("✅ Coin flipped successfully!");
+                resolve("✅ Heads");
+            }else{
+                // reject("❌ Error: Coin could not be flipped.");
+                reject("❌ Tails");
+            }
+        },2000);
     })
 }
-function writeProject() {
-    return new Promise((resolve , rejects) =>{
-        console.log("writing project");
-        setTimeout(() => {
-            console.log("project written");
-            resolve();
-            rejects("error in writing project");
-        }, 2000);
-})
-}
-function runProject() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run project");
-        setTimeout(() => {
-            console.log("project run");
-            resolve();
-            rejects("error in running project");
-        }, 2000);
-})
-}
-function writtenHTML() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing HTML");
-        setTimeout(() => {
-            console.log("HTML written");
-            resolve();
-            rejects("error in writing HTML");
-        }, 2000);
-})
-} 
-function runHTML() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run HTML");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running HTML");
-        }, 1000);
-})
-}
-function writtenCSS() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing CSS");
-        setTimeout(() => {
-            console.log("CSS written");
-            resolve();
-            rejects("error in writing CSS");
-        }, 2000);
-})      
-}
-function runCSS() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run CSS");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running CSS");
-        }, 1000);
-})
-} 
-function writtenJS() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing JS");
-        setTimeout(() => {
-            console.log("JS written");
-            resolve();
-            rejects("error in writing JS");
-        }, 2000);
-})
-}
-function runJS() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run JS");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running JS");
-        }, 1000);
-})
-}
-function writtenReact() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing React");
-        setTimeout(() => {
-            console.log("React written");
-            resolve();
-            rejects("error in writing React");
-        }, 2000);
-})
-}
-function runReact() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run React");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running React");
-        }, 1000);
-})
-}
-function writtenNode() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing Node");
-        setTimeout(() => {
-            console.log("Node written");
-            resolve();
-            rejects("error in writing Node");
-        }, 2000);
-})
-}
-function runNode() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run Node");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running Node");
-        }, 1000);
-})
-}
-function writtenExpress() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing Express");
-        setTimeout(() => {
-            console.log("Express written");
-            resolve();
-            rejects("error in writing Express");
-        }, 2000);
-})
-}
-function runExpress() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run Express");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running Express");
-        }, 1000);
-})
-}  
-function writtenMongo() {
-    return new Promise((resolve , rejects) =>{
-        console.log(" writing Mongo");
-        setTimeout(() => {
-            console.log("Mongo written");
-            resolve();
-            rejects("error in writing Mongo");
-        }, 2000);
-})
-}
-function runMongo() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run Mongo");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running Mongo");
-        }, 1000);
-})
-}
-function writtenMongoose() {
-    return new Promise((resolve , rejects) =>{
-        console.log("writing Mongoose");
-        setTimeout(()=>{
-            console.log("Mongoose written");
-            resolve();
-            rejects("error in writing Mongoose");
-        },2000);
-    })    
-}
-function runMongoose() {
-    return new Promise((resolve , rejects) =>{
-        console.log("run Mongoose");                        
-        setTimeout(() => {
-            console.log("run");
-            resolve();
-            rejects("error in running Mongoose");
-        }, 1000);
-})
-}
-setupSDK()
-.then(runSDK)
-.then(chooseLan)
-.then(writeProject)
-.then(runProject)
-.then(writtenHTML)
-.then(runHTML)
-.then(writtenCSS)
-.then(runCSS)
-.then(writtenJS)
-.then(runJS)
-.then(writtenReact)
-.then(runReact)
-.then(writtenNode)
-.then(runNode)
-.then(writtenExpress)
-.then(runExpress)
-.then(writtenMongo)
-.then(runMongo)
-.then(writtenMongoose)
-.then(runMongoose)
-.then(() => console.log("All done!"))    
-.catch((err) => console.log(err));
+// flipCoin()
+// .then((message)=> console.log(message))
+// .catch((error)=> console.log(error));
