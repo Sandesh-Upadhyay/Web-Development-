@@ -694,47 +694,66 @@ setupSDK()
 // .catch((error)=> console.log(error));
 
 
-function flipCoinFrontend() {
-    document.querySelector(".result").textContent = "⏳ Flipping...";
-    let coin = document.querySelector(".coin");
-    let sound = document.getElementById("flipSound");
-    sound.play(); // Play coin flip sound
+// function flipCoinFrontend() {
+//     document.querySelector(".result").textContent = "⏳ Flipping...";
+//     let coin = document.querySelector(".coin");
+//     let sound = document.getElementById("flipSound");
+//     sound.play(); // Play coin flip sound
 
-    flipCoin()
-        .then((message) => {
-            let isHeads = message.includes("HEADS");
+//     flipCoin()
+//         .then((message) => {
+//             let isHeads = message.includes("HEADS");
 
-            gsap.to(coin, {
-                duration: 1.5,  
-                rotationX: 1080,  
-                y: -150, 
-                ease: "power2.out",
-                onComplete: () => {
-                    gsap.to(coin, { y: 0, duration: 0.5, ease: "bounce.out" }); 
-                    coin.textContent = isHeads ? "HEADS" : "TAILS";
-                    document.querySelector(".result").textContent = message;
-                }
-            });
-        })
-        .catch((error) => {
-            document.querySelector(".result").textContent = error;
-        });
-}
-function flipCoin(){
-    return new Promise((resolve , reject)=>{
-        console.log("⏳ Flipping coin...");
-        setTimeout(()=>{
-            let success = Math.random() <0.5;
-            if (success){
-                // resolve("✅ Coin flipped successfully!");
-                resolve("✅ Heads");
-            }else{
-                // reject("❌ Error: Coin could not be flipped.");
-                reject("❌ Tails");
-            }
-        },2000);
-    })
-}
+//             gsap.to(coin, {
+//                 duration: 1.5,  
+//                 rotationX: 1080,  
+//                 y: -150, 
+//                 ease: "power2.out",
+//                 onComplete: () => {
+//                     gsap.to(coin, { y: 0, duration: 0.5, ease: "bounce.out" }); 
+//                     coin.textContent = isHeads ? "HEADS" : "TAILS";
+//                     document.querySelector(".result").textContent = message;
+//                 }
+//             });
+//         })
+//         .catch((error) => {
+//             document.querySelector(".result").textContent = error;
+//         });
+// }
+// function flipCoin(){
+//     return new Promise((resolve , reject)=>{
+//         console.log("⏳ Flipping coin...");
+//         setTimeout(()=>{
+//             let success = Math.random() <0.5;
+//             if (success){
+//                 // resolve("✅ Coin flipped successfully!");
+//                 resolve("✅ Heads");
+//             }else{
+//                 // reject("❌ Error: Coin could not be flipped.");
+//                 reject("❌ Tails");
+//             }
+//         },2000);
+//     })
+// }
 // flipCoin()
 // .then((message)=> console.log(message))
 // .catch((error)=> console.log(error));
+
+
+function sendMsg(){
+    return new Promise(resolve, reject =>{
+        console.log("Sending message...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5; // Randomly simulating success or failure
+            if(success){
+                resolve("Message sent successfully!");
+            }else{
+                reject("Error: Message could not be sent.");
+            }   
+        },2000);
+    });
+}
+
+sendMsg()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
