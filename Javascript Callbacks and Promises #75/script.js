@@ -757,3 +757,23 @@ function sendMsg(){
 sendMsg()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
+
+
+
+function catchingError(){
+    return newPromise(resolve, reject =>{
+        console.log("catching error...");
+        setTimeout(()=>{
+            let success = math.random() < 0.5;
+            if(success){
+                resolve("Error caught successfully!");
+            }else{
+                reject("Error: Could not catch the error.");
+            }
+        }, 2000);
+    });
+}
+
+catchingError()
+.then ((message) =>console.log(message))
+.catch((error) => console.log(error)); 
