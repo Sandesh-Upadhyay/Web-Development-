@@ -777,3 +777,24 @@ function catchingError(){
 catchingError()
 .then ((message) =>console.log(message))
 .catch((error) => console.log(error)); 
+
+
+
+
+function checkMsg(){
+    return newPromise(resolve, reject =>{
+        console.log("Checking message...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Message checked successfully!");
+            }else{
+                reject("Error: Could not check the message.");
+            }
+        }, 2000);
+    })
+}
+
+checkMsg()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
