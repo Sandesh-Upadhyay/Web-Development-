@@ -934,3 +934,58 @@ n sendMoney(){
 sendMoney()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
+
+
+sendMoney(){
+    return newPromise(resolve, reject =>{
+        console.log("Sending money...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Money Sended successfully!");
+            }else{
+                reject("Error: Could not send the money.");
+            }
+        }, 2000);
+    })
+}
+
+sendMoney()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+sendMoney(){
+    return newPromise(resolve, reject =>{
+        console.log("Sending money...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Money Sended successfully!");
+            }else{
+                reject("Error: Could not send the money.");
+            }
+        }, 2000);
+    })
+}
+
+sendMoney()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+sendMoney(){
+    return newPromise(resolve, reject =>{
+        console.log("Sending money...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Money Sended successfully!");
+            }else{
+                reject("Error: Could not send the money.");
+            }
+        }, 2000);
+    })
+}
+
+sendMoney()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
