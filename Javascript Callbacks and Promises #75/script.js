@@ -837,3 +837,39 @@ function useMind(){
 useMind()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
+
+
+function useMind(){
+    return newPromise(resolve, reject =>{
+        console.log("Using mind...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Mind used successfully!");
+            }else{
+                reject("Error: Could not use the mind.");
+            }
+        }, 2000);
+    })
+}
+useMind()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+
+function useMind(){
+    return newPromise(resolve, reject =>{
+        console.log("Using mind...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Mind used successfully!");
+            }else{
+                reject("Error: Could not use the mind.");
+            }
+        }, 2000);
+    })
+}
+useMind()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
