@@ -929,3 +929,21 @@ function useMind(){
 useMind()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
+
+
+function useMessage(){
+    return newPromise(resolve, reject =>{
+        console.log("Sending message...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Message sent successfully!");
+            }else{
+                reject("Error: Could not send the message!);
+            }
+        }, 2000);
+    })
+}
+useMessage()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
