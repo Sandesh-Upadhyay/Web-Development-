@@ -741,7 +741,7 @@ setupSDK()
 
 
 function sendMsg(){
-    return new Promise(resolve, reject =>{
+    return new Promise((resolve, reject) =>{
         console.log("Sending message...");
         setTimeout(()=>{
             let success = Math.random() < 0.5; // Randomly simulating success or failure
@@ -761,10 +761,10 @@ sendMsg()
 
 
 function catchingError(){
-    return newPromise(resolve, reject =>{
+    return new Promise((resolve, reject) =>{
         console.log("catching error...");
         setTimeout(()=>{
-            let success = math.random() < 0.5;
+            let success = Math.random() < 0.5;
             if(success){
                 resolve("Error caught successfully!");
             }else{
@@ -782,7 +782,7 @@ catchingError()
 
 
 function checkMsg(){
-    return newPromise(resolve, reject =>{
+    return new Promise((resolve, reject) =>{
         console.log("Checking message...");
         setTimeout(()=>{
             let success = Math.random() < 0.5;
@@ -804,7 +804,7 @@ checkMsg()
 
 
 function sendMoney(){
-    return newPromise(resolve, reject =>{
+    return new Promise((resolve, reject) =>{
         console.log("Sending money...");
         setTimeout(()=>{
             let success = Math.random() < 0.5;
@@ -822,7 +822,7 @@ sendMoney()
 .catch((error) => console.log(error));
 
 function useMind(){
-    return newPromise(resolve, reject =>{
+    return new Promise((resolve, reject) =>{
         console.log("Using mind...");
         setTimeout(()=>{
             let success = Math.random() < 0.5;
@@ -838,112 +838,37 @@ useMind()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
 
-
-function useMind(){
-    return newPromise(resolve, reject =>{
-        console.log("Using mind...");
-        setTimeout(()=>{
+function useMe(){
+    return new Promise((resolve, reject) => {
+        console.log("Using me...");
+        setTimeout(() => {
             let success = Math.random() < 0.5;
             if(success){
-                resolve("Mind used successfully!");
+                resolve("Me used successfully!");
             }else{
-                reject("Error: Could not use the mind.");
+                reject("Error: Could not use me.");
             }
         }, 2000);
-    })
+    });
 }
-useMind()
+useMe()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
 
 
-function useMind(){
-    return newPromise(resolve, reject =>{
-        console.log("Using mind...");
+function useYou(){
+    return new Promise((resolve, reject)=>{
+        console.log("Using you>>>");
         setTimeout(()=>{
             let success = Math.random() < 0.5;
             if(success){
-                resolve("Mind used successfully!");
+                resolve("You used successfully!");
             }else{
-                reject("Error: Could not use the mind.");
+                reject("Error: Could not use you.");
             }
         }, 2000);
     })
 }
-useMind()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-
-
-function useMind(){
-    return newPromise(resolve, reject =>{
-        console.log("Using mind...");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("Mind used successfully!");
-            }else{
-                reject("Error: Could not use the mind.");
-            }
-        }, 2000);
-    })
-}
-useMind()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-
-
-
-
-
-
-function useMind(){
-    return newPromise(resolve, reject =>{
-        console.log("Using mind...");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("Mind used successfully!");
-            }else{
-                reject("Error: Could not use the mind.");
-            }
-        }, 2000);
-    })
-}
-useMind()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-function useMind(){
-    return newPromise(resolve, reject =>{
-        console.log("Using mind...");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("Mind used successfully!");
-            }else{
-                reject("Error: Could not use the mind.");
-            }
-        }, 2000);
-    })
-}
-useMind()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-
-
-function useMessage(){
-    return newPromise(resolve, reject =>{
-        console.log("Sending message...");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("Message sent successfully!");
-            }else{
-                reject("Error: Could not send the message!);
-            }
-        }, 2000);
-    })
-}
-useMessage()
+useYou()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
