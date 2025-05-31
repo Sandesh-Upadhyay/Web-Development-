@@ -874,71 +874,19 @@ useYou()
 .catch((error) => console.log(error));
 
 
-
-
-function useYou(){
-    return new Promise((resolve, reject)=>{
-        console.log("Using you>>>");
-        setTimeout(()=>{
+function useThem(){
+    return new Promise((resolve, reject) => {
+        console.log("Using them...");
+        setTimeout(() => {
             let success = Math.random() < 0.5;
             if(success){
-                resolve("You used successfully!");
+                resolve("Them used successfully!");
             }else{
-                reject("Error: Could not use you.");
+                reject("Error: Could not use them.");
             }
         }, 2000);
-    })
+    });
 }
-useYou()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-
-
-function useYou(){
-    return new Promise((resolve, reject)=>{
-        console.log("Using you>>>");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("You used successfully!");
-            }else{
-                reject("Error: Could not use you.");
-            }
-        }, 2000);
-    })
-}
-useYou()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-function useYou(){
-    return new Promise((resolve, reject)=>{
-        console.log("Using you>>>");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("You used successfully!");
-            }else{
-                reject("Error: Could not use you.");
-            }
-        }, 2000);
-    })
-}
-useYou()
-.then((message) => console.log(message))
-.catch((error) => console.log(error));
-function useYou(){
-    return new Promise((resolve, reject)=>{
-        console.log("Using you>>>");
-        setTimeout(()=>{
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("You used successfully!");
-            }else{
-                reject("Error: Could not use you.");
-            }
-        }, 2000);
-    })
-}
-useYou()
-.then((message) => console.log(message))
+useThem()    
+.then((message) => console.log(message))    
 .catch((error) => console.log(error));
