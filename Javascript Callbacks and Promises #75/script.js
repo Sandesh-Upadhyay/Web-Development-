@@ -873,38 +873,70 @@ useYou()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
 
-
-function useThem(){
+function them(){
     return new Promise((resolve, reject) => {
-        console.log("Using them...");
-        setTimeout(() => {
+        console.log("message sending....");
+        setTimeout(()=>{
             let success = Math.random() < 0.5;
-            if(success){
-                resolve("Them used successfully!");
+            if (success){
+                resolve("message sent successfully!");
             }else{
-                reject("Error: Could not use them.");
+                reject("Error: Could not send the message.");
             }
         }, 2000);
-    });
+    })
+    
 }
-useThem()    
-.then((message) => console.log(message))    
+them()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+function them(){
+    return new Promise((resolve, reject) => {
+        console.log("message sending....");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if (success){
+                resolve("message sent successfully!");
+            }else{
+                reject("Error: Could not send the message.");
+            }
+        }, 2000);
+    })
+    
+}
+them()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+function them(){
+    return new Promise((resolve, reject) => {
+        console.log("message sending....");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if (success){
+                resolve("message sent successfully!");
+            }else{
+                reject("Error: Could not send the message.");
+            }
+        }, 2000);
+    })
+    
+}
+them()
+.then((message) => console.log(message))
 .catch((error) => console.log(error));
 
 
-function useThem(){
-    return new Promise((resolve, reject) => {
-        console.log("Using them...");
-        setTimeout(() => {
-            let success = Math.random() < 0.5;
-            if(success){
-                resolve("Them used successfully!");
-            }else{
-                reject("Error: Could not use them.");
-            }
-        }, 2000);
-    });
-}
-useThem()    
-.then((message) => console.log(message))    
-.catch((error) => console.log(error));
+
+
+
+
+
+
+
+
+
+
+
+
