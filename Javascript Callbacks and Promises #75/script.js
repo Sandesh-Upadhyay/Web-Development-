@@ -929,6 +929,24 @@ them()
 .then((message) => console.log(message))
 .catch((error) => console.log(error));
 
+function them(){
+    return new Promise((resolve, reject) => {
+        console.log("message sending....");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if (success){
+                resolve("message sent successfully!");
+            }else{
+                reject("Error: Could not send the message.");
+            }
+        }, 2000);
+    })
+    
+}
+them()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
 
 
 
