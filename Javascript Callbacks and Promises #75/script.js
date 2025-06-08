@@ -1041,3 +1041,61 @@ myLove()
 .catch((error) => console.log(error));
 
 
+
+function myLove(){
+    return new Promise((resolve, reject)=>{
+        console.log("Agree to my love...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Love agreed successfully!");
+            }else{  
+                reject("Error: Could not agree to the love.");
+            }
+        }, 2000); // ✅ Closing bracket fixed here!
+    });
+}
+
+myLove()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+
+function myLove(){
+    return new Promise((resolve, reject)=>{
+        console.log("Agree to my love...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Love agreed successfully!");
+            }else{  
+                reject("Error: Could not agree to the love.");
+            }
+        }, 2000); // ✅ Closing bracket fixed here!
+    });
+}
+
+myLove()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+
+function myLove(){
+    return new Promise((resolve, reject)=>{
+        console.log("Agree to my love...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if(success){
+                resolve("Love agreed successfully!");
+            }else{  
+                reject("Error: Could not agree to the love.");
+            }
+        }, 2000); // ✅ Closing bracket fixed here!
+    });
+}
+
+myLove()
+.then((message) => console.log(message))
+.catch((error) => console.log(error));
+
+
