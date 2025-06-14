@@ -1118,3 +1118,19 @@ myLove()
 .catch((error) => console.log(error));
 
 
+function goingHome(){
+    return new Promise((resolve, reject) => {
+        console.log("Travelling with Train....");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if (success){
+                resolve("Reached Home Safely....");
+            }else{
+                reject("On the way....");
+            }
+        },2000);
+    })
+}
+goingHome()
+.catch((message)=> console.log(message))
+.then((message) => console.log(message));
