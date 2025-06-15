@@ -923,3 +923,20 @@ function goingHome(){
 goingHome()
 .catch((message)=> console.log(message))
 .then((message) => console.log(message));
+
+function arrivedHome(){
+    return new Promise((ersolve , reject)=>{
+        console.log("He Reached At Home...");
+        setTimeout(()=>{
+            let success = Math.random() < 0.5;
+            if (success){
+                resolve("Reached Home Safely...");
+            }else{
+                reject("On the way...");
+            }       
+        }, 2000);
+    })
+}
+arrivedHome()
+.catch((message) => console.log(message))
+.then((message) => console.log(message));
